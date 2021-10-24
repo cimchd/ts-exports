@@ -1,0 +1,21 @@
+{
+  "name": "@project/test",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cpy '**/*.vue' '../dist/' --cwd=src --parents && tsc"
+  },
+  "devDependencies": {
+    "cpy-cli": "^3.1.1",
+    "typescript": "^4.5.0-beta"
+  },
+  "peerDependencies": {
+    "vue": "3.x"
+  },
+  "type": "module",
+  "exports": {
+    "./components": "./dist/components/index.js",
+    "./dist/*": "./dist/*",
+    "./*": "./dist/*"
+  }
+}
